@@ -1,0 +1,119 @@
+# Node.js and npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+package-lock.json # If you're using npm < 7, otherwise commit it
+yarn.lock # If you're using yarn classic (v1), otherwise commit it
+pnpm-lock.yaml # Always commit pnpm-lock.yaml
+
+# Visual Studio Code
+.vscode/
+.vscode/*.log
+.vscode/*.bak
+.vscode/*.txt
+
+# TypeScript
+*.tsbuildinfo
+*.js.map # Source maps for compiled JS (if you don't want to commit them)
+*.d.ts.map # Source maps for declaration files (if you don't want to commit them)
+
+# Compiled output
+dist/
+build/
+out/
+es/
+lib/
+# Add other specific build output directories if you have them, e.g.,
+# cjs/
+# mjs/
+
+# Log files
+*.log
+logs/
+*.error.log
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+
+# Editor-specific files
+.idea/ # IntelliJ IDEA
+.history/ # VS Code Local History
+*.sublime-project
+*.sublime-workspace
+.DS_Store # macOS
+Thumbs.db # Windows
+ehthumbs.db # Windows
+Desktop.ini # Windows
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+.env*.js # If you have .env.js files
+.env*.json # If you have .env.json files
+.flaskenv # For Flask apps that might be in a monorepo
+
+# Test coverage reports
+coverage/
+.nyc_output/
+
+# Dependency caches
+.npm/
+.yarn/cache/
+.pnpm-store/
+
+# IDE/OS generated files
+*.iml # IntelliJ IDEA
+.project # Eclipse
+.classpath # Eclipse
+.settings/ # Eclipse
+
+# Next.js specific
+.next/
+# If you're deploying a static site, you might want to commit `out/`
+# but generally, it's a build output.
+
+# Nuxt.js specific
+.nuxt/
+
+# SvelteKit specific
+.svelte-kit/
+.svelte/
+
+# Gatsby specific
+.cache/
+public/ # if not deploying static site
+
+# Vue CLI / Vite specific
+# For Vite, `dist` is usually the default, already covered above.
+
+# Storybook specific
+storybook-static/
+
+# AWS Amplify specific
+.amplify-hosting/
+
+# Docker
+Dockerfile.local # Or any local-only Dockerfile
+.dockerignore # Often you want to commit this, but if it's dynamic...
+!docker-compose.override.yml # If you have local overrides you don't want to track
+
+# Git specific
+.gitattributes
+.gitkeep # Generally fine to commit, but if generated...
+
+# Others
+.eslintcache
+.stylelintcache
+.prettierignore # Typically commit this
+# .prettierrc.* files are usually committed
+# .eslintrc.* files are usually committed
+# tsconfig.json is usually committed
