@@ -1,0 +1,48 @@
+{
+  "name": "google-tasks-mcp",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server for Google Tasks API",
+  "main": "dist/index.js",
+  "bin": {
+    "google-tasks-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "start": "node dist/index.js",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flareair/google-tasks-mcp.git"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "google-tasks",
+    "api",
+    "claude"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/flareair/google-tasks-mcp/issues"
+  },
+  "homepage": "https://github.com/flareair/google-tasks-mcp#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.0",
+    "googleapis": "^154.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
