@@ -321,4 +321,35 @@ export class OAuthManager {
     
     return tokens.access_token;
   }
+
+  /**
+   * Get valid tokens (with auto-refresh)
+   */
+  async getValidTokens(): Promise<TokenSet | null> {
+    const isValid = await this.isTokenValid();
+    
+    if (!isValid) {
+      try {
+        return await this.refreshAccessToken();
+      } catch (error) {
+        return null;
+      }
+    }
+    
+    return await this.tokenStorage.loadTokens();
+  }
+
+  /**
+   * Get client ID
+   */
+  getClientId(): string {
+    return this.config.clientId;
+  }
+
+  /**
+   * Get redirect URI
+   */
+  getRedirectUri(): string {
+    return this.config.redirectUri;
+  }
 }
